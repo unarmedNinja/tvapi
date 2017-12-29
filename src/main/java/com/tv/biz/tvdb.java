@@ -1,10 +1,15 @@
 package com.tv.biz;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.tv.models.Episode;
+import com.tv.models.EpisodeWrapper;
 import com.tv.models.Token;
 import net.minidev.json.JSONObject;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -60,7 +65,7 @@ public class tvdb {
         return response.getBody();
     }
 
-    public String getEpisodes(String accessToken, String id){
+    public List<Episode> getEpisodes(String accessToken, String id){
         String url = API_DOMAIN + "/series/" + id + "/episodes";
 
         HttpHeaders httpHeaders = new HttpHeaders();
@@ -72,9 +77,14 @@ public class tvdb {
         restTemplate.setRequestFactory(new HttpComponentsAsyncClientHttpRequestFactory());
         //Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
 
-        ResponseEntity<String> response = restTemplate.exchange(
-                url, HttpMethod.GET, request, String.class, "");
 
-        return response.getBody();
+        ResponseEntity<EpisodeWrapper> response = restTemplate.exchange(
+                url, HttpMethod.GET, request, EpisodeWrapper.class, "");
+
+        EpisodeWrapper wrapper = response.getBody();
+        List<Episode> episodes = wrapper.getData();
+        episodes.forEach((e) -> e.setShowid(Integer.parseInt(id)));
+
+        return episodes;
     }
 }

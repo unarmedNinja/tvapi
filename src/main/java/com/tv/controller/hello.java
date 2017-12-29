@@ -1,6 +1,7 @@
 package com.tv.controller;
 
 import com.tv.db.ShowJdbcRepository;
+import com.tv.models.Episode;
 import com.tv.models.Show;
 import com.tv.models.Token;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tv.biz.tvdb;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @RequestMapping("/tv")
 @RestController
@@ -39,10 +41,13 @@ public class hello {
     }
 
     @RequestMapping("/episodes")
-    public String episodes(HttpSession session){
+    public List<Episode> episodes(HttpSession session){
         String token = (String)session.getAttribute("token");
         tvdb tvapi = new tvdb();
-        String data = tvapi.getEpisodes(token,"257655");
+        List<Episode> data = tvapi.getEpisodes(token,"257655");
+
+        data.forEach((e) -> repository.insertEpisode(e));
+
         return data;
     }
 
