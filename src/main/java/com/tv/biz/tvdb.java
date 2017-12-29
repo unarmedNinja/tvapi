@@ -18,6 +18,7 @@ public class tvdb {
     private final String API_KEY = "D0A2EF46A5938D34";
     private final String USER_NAME = "unarmedninja";
     private final String USER_KEY = "610C63A36CCFD6B0";
+    private final String API_DOMAIN = "https://api.thetvdb.com";
 
     public Token getToken(){
         HttpHeaders httpHeaders = new HttpHeaders();
@@ -30,7 +31,7 @@ public class tvdb {
         req_payload.put("username", USER_NAME);
 
         HttpEntity<String> request = new HttpEntity<String>(req_payload.toString(), httpHeaders);
-        String url = "https://api.thetvdb.com/login";
+        String url = API_DOMAIN + "/login";
 
         RestTemplate restTemplate = new RestTemplate();
         Token response = restTemplate.postForObject(url, request, Token.class);
@@ -42,7 +43,7 @@ public class tvdb {
     }
 
     public String getSummary(String accessToken, String id){
-        String url = "https://api.thetvdb.com/series/" + id + "/episodes/summary";
+        String url = API_DOMAIN + "/series/" + id + "/episodes/summary";
 
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.set("Content-Type", "application/json");
@@ -59,4 +60,21 @@ public class tvdb {
         return response.getBody();
     }
 
+    public String getEpisodes(String accessToken, String id){
+        String url = API_DOMAIN + "/series/" + id + "/episodes";
+
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.set("Content-Type", "application/json");
+        httpHeaders.set("Authorization", "Bearer "+accessToken);
+
+        HttpEntity<String> request = new HttpEntity<String>(httpHeaders);
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.setRequestFactory(new HttpComponentsAsyncClientHttpRequestFactory());
+        //Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
+
+        ResponseEntity<String> response = restTemplate.exchange(
+                url, HttpMethod.GET, request, String.class, "");
+
+        return response.getBody();
+    }
 }
