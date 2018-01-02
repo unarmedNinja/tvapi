@@ -7,27 +7,27 @@ import java.util.Date;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Episode {
-    public String getAbsoluteNumber() {
+    public int getAbsoluteNumber() {
         return absoluteNumber;
     }
 
-    public void setAbsoluteNumber(String absoluteNumber) {
+    public void setAbsoluteNumber(int absoluteNumber) {
         this.absoluteNumber = absoluteNumber;
     }
 
-    public String getAiredEpisodeNumber() {
+    public int getAiredEpisodeNumber() {
         return airedEpisodeNumber;
     }
 
-    public void setAiredEpisodeNumber(String airedEpisodeNumber) {
+    public void setAiredEpisodeNumber(int airedEpisodeNumber) {
         this.airedEpisodeNumber = airedEpisodeNumber;
     }
 
-    public String getAiredSeason() {
+    public int getAiredSeason() {
         return airedSeason;
     }
 
-    public void setAiredSeason(String airedSeason) {
+    public void setAiredSeason(int airedSeason) {
         this.airedSeason = airedSeason;
     }
 
@@ -56,6 +56,7 @@ public class Episode {
     }
 
     public Date getFirstAired() {
+        /*
         Date utilDate;
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         try {
@@ -65,10 +66,30 @@ public class Episode {
             utilDate = new Date();
         }
         return utilDate;
+        */
+        return firstAired;
     }
 
     public void setFirstAired(String firstAired) {
+        Date utilDate;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            utilDate = formatter.parse(firstAired);
+        }
+        catch (Exception e){
+            utilDate = new Date();
+        }
+
+        this.firstAired = utilDate;
+    }
+
+    public void setFirstAired(Date firstAired) {
         this.firstAired = firstAired;
+    }
+
+    public String getFormattedDate() {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        return formatter.format(firstAired);
     }
 
     public int getId() {
@@ -95,16 +116,17 @@ public class Episode {
         this.overview = overview;
     }
 
-    private String absoluteNumber; //int
-    private String airedEpisodeNumber; //int
-    private String airedSeason; //int
+    private int absoluteNumber; //int
+    private int airedEpisodeNumber; //int
+    private int airedSeason; //int
     private String dvdEpisodeNumber; //int
     private String dvdSeason; //int
     private String episodeName; //string
-    private String firstAired; //string
+    private Date firstAired; //string
     private int id;
     private String lastUpdated; //int
     private String overview;
+    private String formattedDate;
 
     public int getShowid() {
         return showid;

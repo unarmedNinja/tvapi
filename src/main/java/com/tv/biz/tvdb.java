@@ -5,10 +5,12 @@ import java.util.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.tv.db.ShowJdbcRepository;
 import com.tv.models.Episode;
 import com.tv.models.EpisodeWrapper;
 import com.tv.models.Token;
 import net.minidev.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -24,6 +26,9 @@ public class tvdb {
     private final String USER_NAME = "unarmedninja";
     private final String USER_KEY = "610C63A36CCFD6B0";
     private final String API_DOMAIN = "https://api.thetvdb.com";
+
+    @Autowired
+    ShowJdbcRepository repository;
 
     public Token getToken(){
         HttpHeaders httpHeaders = new HttpHeaders();
@@ -86,5 +91,18 @@ public class tvdb {
         episodes.forEach((e) -> e.setShowid(Integer.parseInt(id)));
 
         return episodes;
+    }
+
+    public boolean saveEpisodes(List<Episode> episodes){
+        boolean isComplete = false;
+        try {
+            episodes.forEach((e) -> repository.insertEpisode(e));
+            isComplete = true;
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+
+        return true;
     }
 }

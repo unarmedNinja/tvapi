@@ -7,6 +7,8 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class ShowJdbcRepository {
     @Autowired
@@ -20,14 +22,47 @@ public class ShowJdbcRepository {
                 new BeanPropertyRowMapper< Show >(Show.class));
     }
 
+    public List<Show> getAllShows() {
+        List<Show> shows = jdbcTemplate.query("select * from shows",
+                new BeanPropertyRowMapper< Show >(Show.class));
+
+        return shows;
+    }
+
+    public int insertShow(Show show) {
+        return jdbcTemplate.update("insert into shows (id, name) " + "values(?, ?)",
+                new Object[] {
+                        show.getId(),
+                        show.getName()
+                });
+    }
 
     public int insertEpisode(Episode episode) {
-        return jdbcTemplate.update("insert into episodes (id, showId, firstAired, airedEpisodeNumber) " + "values(?, ?, ?, ?)",
+        System.out.println("Aired Season: " + episode.getAiredSeason());
+        return jdbcTemplate.update("insert into episodes (id, showId, firstAired, airedEpisodeNumber,airedSeason, absoluteNumber, episodeName) " + "values(?, ?, ?, ?, ?, ?, ?)",
                 new Object[] {
                         episode.getId(),
                         episode.getShowid(),
                         episode.getFirstAired(),
-                        episode.getAiredEpisodeNumber()
+                        episode.getAiredEpisodeNumber(),
+                        episode.getAiredSeason(),
+                        episode.getAbsoluteNumber(),
+                        episode.getEpisodeName()
                 });
+    }
+
+    public int deleteEpisodesByShowId(int id) {
+        return jdbcTemplate.update("delete from episodes where showId=?", new Object[] {
+                id
+        });
+    }
+
+    public List<Episode> getEpisodesByShowId(int showId) {
+        List<Episode> episodes = jdbcTemplate.query("select * from episodes where showId=?", new Object[] {
+          showId
+        },
+                new BeanPropertyRowMapper< Episode >(Episode.class));
+
+        return episodes;
     }
 }
