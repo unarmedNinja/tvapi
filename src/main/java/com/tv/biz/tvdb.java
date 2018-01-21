@@ -70,7 +70,7 @@ public class tvdb {
         return response.getBody();
     }
 
-    public List<Episode> getEpisodes(String accessToken, String id){
+    public List<Episode> getEpisodes(String accessToken, int id){
         String url = API_DOMAIN + "/series/" + id + "/episodes";
 
         HttpHeaders httpHeaders = new HttpHeaders();
@@ -88,7 +88,7 @@ public class tvdb {
 
         EpisodeWrapper wrapper = response.getBody();
         List<Episode> episodes = wrapper.getData();
-        episodes.forEach((e) -> e.setShowid(Integer.parseInt(id)));
+        episodes.forEach((e) -> e.setShowid(id));
 
         return episodes;
     }

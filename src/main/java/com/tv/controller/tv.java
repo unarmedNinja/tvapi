@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import com.tv.biz.tvdb;
 
 import javax.servlet.http.HttpSession;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @RequestMapping("/tv")
@@ -40,15 +42,14 @@ public class tv {
         return data;
     }
 
-    @RequestMapping("/getEpisodes")
-    public List<Episode> episodesdata(HttpSession session){
+    @RequestMapping("/getEpisodes/{showId}")
+    public List<Episode> episodesdata(HttpSession session, @PathVariable("showId") int showId){
         String token = (String)session.getAttribute("token");
         tvdb tvapi = new tvdb();
-        List<Episode> data = tvapi.getEpisodes(token,"257655");
+        List<Episode> data = tvapi.getEpisodes(token,showId);
 
  //       data.forEach((e) -> repository.insertEpisode(e));
         for (Episode e : data) {
-            System.out.println(e);
             repository.insertEpisode(e);
         }
 
@@ -69,8 +70,8 @@ public class tv {
     }
 
     @RequestMapping("/show/{id}")
-    public Show showById(HttpSession session){
-        Show aShow = repository.findById(257655);
+    public Show showById(HttpSession session, @PathVariable("showId") int showId){
+        Show aShow = repository.findById(showId);
         return aShow;
     }
 
@@ -78,6 +79,19 @@ public class tv {
     public List<Show> getShows(HttpSession session){
         List<Show> shows = repository.getAllShows();
         return shows;
+    }
+
+    @RequestMapping("/shows/recent")
+    public List<Episode> getRecentShows(HttpSession session){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        cal.set(Calendar.DAY_OF_MONTH, cal.get(Calendar.DAY_OF_MONTH)-6);
+
+        // convert to date
+        Date myDate = cal.getTime();
+
+        List<Episode> episodes = repository.getRecentEpisodes(myDate);
+        return episodes;
     }
 
     @RequestMapping(value = "/show/add", method = RequestMethod.POST)
@@ -102,4 +116,3 @@ public class tv {
         return result;
     }
 }
-//jdbc:h2:~/test

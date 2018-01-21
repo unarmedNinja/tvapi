@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -61,6 +62,15 @@ public class ShowJdbcRepository {
         List<Episode> episodes = jdbcTemplate.query("select * from episodes where showId=?", new Object[] {
           showId
         },
+                new BeanPropertyRowMapper< Episode >(Episode.class));
+
+        return episodes;
+    }
+
+    public List<Episode> getRecentEpisodes(Date startDate) {
+        List<Episode> episodes = jdbcTemplate.query("select * from episodes where firstAired >=?", new Object[] {
+                        startDate
+                },
                 new BeanPropertyRowMapper< Episode >(Episode.class));
 
         return episodes;
