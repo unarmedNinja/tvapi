@@ -1,3 +1,5 @@
+drop table shows;
+drop table episodes;
 
 create table shows
 (
