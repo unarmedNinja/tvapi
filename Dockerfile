@@ -3,3 +3,4 @@ MAINTAINER "Matthew Swamy"
 
 ADD docker/settings.xml /usr/local/tomcat/conf/
 ADD docker/tomcat-users.xml /usr/local/tomcat/conf/
+ADD docker/context.xml /usr/local/tomcat/webapps/manager/META-INF/
