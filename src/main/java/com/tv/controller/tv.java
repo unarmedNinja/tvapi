@@ -14,6 +14,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/tv")
 @RestController
 public class tv {

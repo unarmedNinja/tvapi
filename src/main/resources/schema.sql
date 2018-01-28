@@ -1,6 +1,3 @@
-drop table shows;
-drop table episodes;
-
 create table shows
 (
    id integer not null,
