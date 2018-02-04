@@ -71,6 +71,10 @@ public class tvdb {
     }
 
     public List<Episode> getEpisodes(String accessToken, int id){
+        if(accessToken == null){
+            System.out.println("MISSING ACCESS TOKEN");
+            return null;
+        }
         String url = API_DOMAIN + "/series/" + id + "/episodes";
 
         HttpHeaders httpHeaders = new HttpHeaders();

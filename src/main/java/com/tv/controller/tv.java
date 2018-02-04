@@ -27,12 +27,13 @@ public class tv {
     }
 
     @RequestMapping("/token")
-    public String token(HttpSession session) {
+    public Token token(HttpSession session) {
         tvdb tvapi = new tvdb();
         Token token = tvapi.getToken();
         String accessToken = token.getToken();
+        System.out.println("ACCESS TOKEN: " + accessToken);
         session.setAttribute("token", accessToken);
-        return accessToken;
+        return token;
     }
 
     @RequestMapping("/summary")
@@ -46,6 +47,12 @@ public class tv {
     @RequestMapping("/getEpisodes/{showId}")
     public List<Episode> episodesdata(HttpSession session, @PathVariable("showId") int showId){
         String token = (String)session.getAttribute("token");
+        if(token == null){
+            System.out.println("getting new token");
+            Token t = token(session);
+            token = t.getToken();
+        }
+
         tvdb tvapi = new tvdb();
         List<Episode> data = tvapi.getEpisodes(token,showId);
 
