@@ -1,0 +1,635 @@
+2018-02-08 18:39:03.482  INFO 12653 --- [localhost-startStop-1] com.tv.demo.DemoApplication              : Starting DemoApplication on matthew-Y700 with PID 12653 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+2018-02-08 18:39:03.484 DEBUG 12653 --- [localhost-startStop-1] com.tv.demo.DemoApplication              : Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-08 18:39:03.485  INFO 12653 --- [localhost-startStop-1] com.tv.demo.DemoApplication              : No active profile set, falling back to default profiles: default
+2018-02-08 18:39:03.555  INFO 12653 --- [localhost-startStop-1] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11c95ef5: startup date [Thu Feb 08 18:39:03 EST 2018]; root of context hierarchy
+2018-02-08 18:39:04.612  INFO 12653 --- [localhost-startStop-1] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 18:39:04.758  INFO 12653 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/tvapp]  : Initializing Spring embedded WebApplicationContext
+2018-02-08 18:39:05.915  INFO 12653 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'errorPageFilter' to: [/*]
+2018-02-08 18:39:05.916  INFO 12653 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-08 18:39:05.918  INFO 12653 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-08 18:39:05.918  INFO 12653 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-08 18:39:05.919  INFO 12653 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-08 18:39:05.920  INFO 12653 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-08 18:39:05.920  INFO 12653 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-08 18:39:05.922  INFO 12653 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2_console/*]
+2018-02-08 18:39:07.735  INFO 12653 --- [localhost-startStop-1] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2018-02-08 18:39:08.158  INFO 12653 --- [localhost-startStop-1] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 4033a68b-3fe1-4acd-80bb-c668f932997b
+
+2018-02-08 18:39:08.235  INFO 12653 --- [localhost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**'], Ant [pattern='/error']]], []
+2018-02-08 18:39:08.416  INFO 12653 --- [localhost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2_console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36018f0a, org.springframework.security.web.context.SecurityContextPersistenceFilter@5486c08c, org.springframework.security.web.header.HeaderWriterFilter@3e48f360, org.springframework.security.web.authentication.logout.LogoutFilter@5090d892, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3d927e10, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1178c2c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@168737b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54cb2f7e, org.springframework.security.web.session.SessionManagementFilter@63308e45, org.springframework.security.web.access.ExceptionTranslationFilter@71c50272, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5615c6e3]
+2018-02-08 18:39:08.424  INFO 12653 --- [localhost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ea12591, org.springframework.security.web.context.SecurityContextPersistenceFilter@23cd668, org.springframework.security.web.header.HeaderWriterFilter@30a0a6bc, org.springframework.security.web.authentication.logout.LogoutFilter@e9609d5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6a7d11f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@609f9dab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@553f4242, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59377f45, org.springframework.security.web.session.SessionManagementFilter@2eaeab83, org.springframework.security.web.access.ExceptionTranslationFilter@4d15ea9e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65078f82]
+2018-02-08 18:39:08.763  INFO 12653 --- [localhost-startStop-1] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-08 18:39:08.779  INFO 12653 --- [localhost-startStop-1] com.tv.demo.DemoApplication              : Started DemoApplication in 5.926 seconds (JVM running for 11.376)
+2018-02-08 18:39:08.818  INFO 12653 --- [main] org.apache.coyote.http11.Http11Protocol  : Starting ProtocolHandler ["http-bio-8080"]
+2018-02-08 18:39:18.580  INFO 12653 --- [http-bio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/tvapp]  : Initializing Spring FrameworkServlet 'dispatcherServlet'
+"2018-02-08 18:44:30 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 12973 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 18:44:30 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 18:44:30 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 18:44:30 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a84936f: startup date [Thu Feb 08 18:44:30 EST 2018]; root of context hierarchy
+""2018-02-08 18:44:31 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 18:44:31 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 18:44:32 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 18:44:32 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 18:44:32 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 18:44:32 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 18:44:32 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 18:44:32 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 18:44:32 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 18:44:32 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 18:44:34 [localhost-startStop-1] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+""2018-02-08 18:44:34 [localhost-startStop-1] INFO  o.s.b.a.s.AuthenticationManagerConfiguration - 
+
+Using default security password: b226d2ee-61f6-4f02-b64a-6bf970733f78
+
+""2018-02-08 18:44:34 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**'], Ant [pattern='/error']]], []
+""2018-02-08 18:44:35 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2_console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26a62483, org.springframework.security.web.context.SecurityContextPersistenceFilter@1dfcfbae, org.springframework.security.web.header.HeaderWriterFilter@41e5983e, org.springframework.security.web.authentication.logout.LogoutFilter@38b55e5b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@340ece98, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fbf633f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@702064bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7541b51e, org.springframework.security.web.session.SessionManagementFilter@2afbe934, org.springframework.security.web.access.ExceptionTranslationFilter@231d7349, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e79234]
+""2018-02-08 18:44:35 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a98a8db, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a6d1531, org.springframework.security.web.header.HeaderWriterFilter@133f715a, org.springframework.security.web.authentication.logout.LogoutFilter@4dbfd34, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@362db403, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@279c5c6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fc15c66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49d419a5, org.springframework.security.web.session.SessionManagementFilter@34dfe1d3, org.springframework.security.web.access.ExceptionTranslationFilter@87eae5c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@364fe447]
+""2018-02-08 18:44:35 [localhost-startStop-1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-02-08 18:44:35 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Started DemoApplication in 5.708 seconds (JVM running for 11.922)
+""2018-02-08 18:44:35 [main] INFO  o.a.coyote.http11.Http11Protocol - Starting ProtocolHandler ["http-bio-8080"]
+""2018-02-08 18:44:41 [http-bio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2018-02-08 18:44:50 [http-bio-8080-exec-7] DEBUG com.tv.controller.tv - ACCESS TOKEN - eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MTgyMTk4OTAsImlkIjoiZGV2ZWxvcGVyIHRlc3RpbmciLCJvcmlnX2lhdCI6MTUxODEzMzQ5MCwidXNlcmlkIjo0OTUzNDUsInVzZXJuYW1lIjoidW5hcm1lZG5pbmphIn0.InosTpCeUoqrH-slPDpwkB68yBYw90x1jVDl0kfwsfuTVm2V5Nmw1nR_FAfwi6AH1SvQwRxxF42FbP3ZgLU7b3VQEXOGms3Ro2gzrpocL5Megtd_sG92Fe6uUosu9UNo9yRUvLSaW4TpMKgbV1JEGbPlhyDd3ZZKPO_JsS1xgqfTN2sN4mBkhCiMnuyLGriEBSZ5T0TOzq1cSNRu-8byWHRzfLoWeQJdJWBgDgrlauNylCJfRshAppFhN5n7vL5VtpeW9CR0QQZRhgdGfvCh24hEJv9DDforpPQeZ4HGL7S7wU1shtcuJdOH1CHGwvvzluUuL4ByECC0arHwyxO4tQ
+""2018-02-08 19:54:12 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 16059 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 19:54:12 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 19:54:12 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 19:54:12 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@b9b4b70: startup date [Thu Feb 08 19:54:12 EST 2018]; root of context hierarchy
+""2018-02-08 19:54:14 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 19:54:14 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 19:54:15 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 19:54:15 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 19:54:15 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 19:54:15 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 19:54:15 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 19:54:15 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 19:54:15 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 19:54:15 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 19:54:16 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2018-02-08 19:54:16 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2018-02-08 19:54:17 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+""2018-02-08 19:54:17 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+""2018-02-08 19:54:17 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+""2018-02-08 19:54:17 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2018-02-08 19:54:17 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2018-02-08 19:54:17 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 19:54:17 [localhost-startStop-1] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.jwt.service.GenericService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2018-02-08 19:54:17 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 19:54:17 [localhost-startStop-1] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+""2018-02-08 19:54:17 [localhost-startStop-1] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in com.jwt.controllers.ResourceController required a bean of type 'com.jwt.service.GenericService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.jwt.service.GenericService' in your configuration.
+
+""2018-02-08 19:59:48 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 16380 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 19:59:48 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 19:59:48 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 19:59:48 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@59c5df09: startup date [Thu Feb 08 19:59:48 EST 2018]; root of context hierarchy
+""2018-02-08 19:59:50 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 19:59:50 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$1f21dfff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 19:59:50 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 19:59:50 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@67d3c5c3' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 19:59:50 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$43f682b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 19:59:50 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 19:59:50 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$867417c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'security.oauth2.client-org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration$$EnhancerBySpringCGLIB$$3dbdd3c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'resourceServerProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 19:59:51 [localhost-startStop-1] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/schema.sql]
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/schema.sql] in 284 ms.
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/data.sql]
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/data.sql] in 8 ms.
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+""2018-02-08 19:59:52 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2018-02-08 19:59:53 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2018-02-08 19:59:53 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 19:59:53 [localhost-startStop-1] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationServerConfig': Unsatisfied dependency expressed through field 'tokenStore'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appUserDetailsService': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.jwt.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2018-02-08 19:59:53 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 19:59:53 [localhost-startStop-1] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+""2018-02-08 19:59:53 [localhost-startStop-1] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+""2018-02-08 19:59:53 [localhost-startStop-1] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userRepository in com.jwt.service.impl.AppUserDetailsService required a bean of type 'com.jwt.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.jwt.repository.UserRepository' in your configuration.
+
+""2018-02-08 20:05:27 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 16704 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 20:05:27 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 20:05:27 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 20:05:27 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f70151d: startup date [Thu Feb 08 20:05:27 EST 2018]; root of context hierarchy
+""2018-02-08 20:05:28 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 20:05:28 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$fd212e1d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:05:28 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:05:28 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@45e87e31' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:05:28 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$21f5d0cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:05:29 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:05:29 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$647365e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:05:29 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'security.oauth2.client-org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:05:29 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration$$EnhancerBySpringCGLIB$$1bbd21e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:05:29 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'resourceServerProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:05:29 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/schema.sql]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/schema.sql] in 56 ms.
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/data.sql]
+""2018-02-08 20:05:30 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/data.sql] in 13 ms.
+""2018-02-08 20:05:31 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:05:31 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2018-02-08 20:05:31 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+""2018-02-08 20:05:31 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+""2018-02-08 20:05:31 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+""2018-02-08 20:05:31 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2018-02-08 20:05:31 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2018-02-08 20:05:31 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:05:32 [localhost-startStop-1] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationServerConfig': Unsatisfied dependency expressed through field 'tokenStore'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appUserDetailsService': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.jwt.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2018-02-08 20:05:32 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:05:32 [localhost-startStop-1] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+""2018-02-08 20:05:32 [localhost-startStop-1] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+""2018-02-08 20:05:32 [localhost-startStop-1] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userRepository in com.jwt.service.impl.AppUserDetailsService required a bean of type 'com.jwt.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.jwt.repository.UserRepository' in your configuration.
+
+""2018-02-08 20:07:42 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 16832 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 20:07:42 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 20:07:42 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 20:07:42 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3ed9a227: startup date [Thu Feb 08 20:07:42 EST 2018]; root of context hierarchy
+""2018-02-08 20:07:43 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d8c42b6d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1152b92c' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fd98ce1f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$40166333] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'security.oauth2.client-org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration$$EnhancerBySpringCGLIB$$f7601f33] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'resourceServerProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:07:44 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/schema.sql]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/schema.sql] in 65 ms.
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/data.sql]
+""2018-02-08 20:07:45 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/data.sql] in 15 ms.
+""2018-02-08 20:07:46 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:07:46 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2018-02-08 20:07:46 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+""2018-02-08 20:07:46 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+""2018-02-08 20:07:46 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+""2018-02-08 20:07:46 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2018-02-08 20:07:46 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2018-02-08 20:07:47 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:07:47 [localhost-startStop-1] WARN  o.s.s.o.p.t.s.JwtAccessTokenConverter - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+""2018-02-08 20:07:48 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+""2018-02-08 20:07:48 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+""2018-02-08 20:07:48 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+""2018-02-08 20:07:48 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+""2018-02-08 20:07:48 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+""2018-02-08 20:07:48 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+""2018-02-08 20:07:48 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+""2018-02-08 20:07:48 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/token_key],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.String> org.springframework.security.oauth2.provider.endpoint.TokenKeyEndpoint.getKey(java.security.Principal)
+""2018-02-08 20:07:49 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@455bf86d, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f0fe22d, org.springframework.security.web.header.HeaderWriterFilter@809118a, org.springframework.security.web.authentication.logout.LogoutFilter@1fac1c32, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@70e7270f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3de5f1c7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e405096, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4053e277, org.springframework.security.web.session.SessionManagementFilter@1f0a083b, org.springframework.security.web.access.ExceptionTranslationFilter@69ae75f3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62141221]
+""2018-02-08 20:07:49 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@6223782b, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5928f914, org.springframework.security.web.context.SecurityContextPersistenceFilter@632d64a5, org.springframework.security.web.header.HeaderWriterFilter@5e1222cf, org.springframework.security.web.authentication.logout.LogoutFilter@2a2f000e, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@7e57bf3d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12177be1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d5c3736, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50675296, org.springframework.security.web.session.SessionManagementFilter@7881f0bb, org.springframework.security.web.access.ExceptionTranslationFilter@114c10f9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@750efd11]
+""2018-02-08 20:07:49 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4019e9cf, org.springframework.security.web.context.SecurityContextPersistenceFilter@449328e5, org.springframework.security.web.header.HeaderWriterFilter@5a041896, org.springframework.security.web.authentication.logout.LogoutFilter@3e4c6aa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5eed1233, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60ffd2ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ac5b68a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77df76a0, org.springframework.security.web.session.SessionManagementFilter@37a5c3a3, org.springframework.security.web.access.ExceptionTranslationFilter@781b8a66]
+""2018-02-08 20:07:49 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2_console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c80cb2a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f5ef380, org.springframework.security.web.header.HeaderWriterFilter@3a445e31, org.springframework.security.web.authentication.logout.LogoutFilter@127fa026, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@aa5931a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52713e90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4adc4739, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73b63442, org.springframework.security.web.session.SessionManagementFilter@74158dc1, org.springframework.security.web.access.ExceptionTranslationFilter@25430a39, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@303c44e4]
+""2018-02-08 20:07:50 [localhost-startStop-1] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+""2018-02-08 20:07:50 [localhost-startStop-1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-02-08 20:07:50 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Started DemoApplication in 8.857 seconds (JVM running for 15.486)
+""2018-02-08 20:07:50 [main] INFO  o.a.coyote.http11.Http11Protocol - Starting ProtocolHandler ["http-bio-8080"]
+""2018-02-08 20:08:27 [http-bio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2018-02-08 20:15:18 [http-bio-8080-exec-3] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+""2018-02-08 20:22:13 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 17637 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 20:22:13 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 20:22:13 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 20:22:13 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5ba6c5fc: startup date [Thu Feb 08 20:22:13 EST 2018]; root of context hierarchy
+""2018-02-08 20:22:15 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 20:22:15 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$54897123] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:22:15 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:22:15 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2b47dbfe' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:22:15 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$795e13d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:22:15 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:22:15 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bbdba8e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:22:15 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'security.oauth2.client-org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:22:15 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration$$EnhancerBySpringCGLIB$$732564e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'resourceServerProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 20:22:16 [localhost-startStop-1] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/schema.sql]
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/schema.sql] in 44 ms.
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/data.sql]
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/data.sql] in 8 ms.
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+""2018-02-08 20:22:17 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2018-02-08 20:22:18 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2018-02-08 20:22:18 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:22:19 [localhost-startStop-1] WARN  o.s.s.o.p.t.s.JwtAccessTokenConverter - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+""2018-02-08 20:22:19 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+""2018-02-08 20:22:19 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+""2018-02-08 20:22:19 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+""2018-02-08 20:22:19 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+""2018-02-08 20:22:19 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+""2018-02-08 20:22:19 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+""2018-02-08 20:22:19 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+""2018-02-08 20:22:19 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/token_key],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.String> org.springframework.security.oauth2.provider.endpoint.TokenKeyEndpoint.getKey(java.security.Principal)
+""2018-02-08 20:22:20 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@364226f4, org.springframework.security.web.context.SecurityContextPersistenceFilter@50bed6e, org.springframework.security.web.header.HeaderWriterFilter@5995d15d, org.springframework.security.web.authentication.logout.LogoutFilter@380a3c52, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@61adfe34, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a437f3d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@163433d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@730d8370, org.springframework.security.web.session.SessionManagementFilter@51a180da, org.springframework.security.web.access.ExceptionTranslationFilter@4f9e7b08, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e8460e6]
+""2018-02-08 20:22:20 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@15ff1b92, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c236593, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f8de8c, org.springframework.security.web.header.HeaderWriterFilter@774c73d5, org.springframework.security.web.authentication.logout.LogoutFilter@65fa9765, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@3c3f20b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77910fe6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63d7181a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c5e21d4, org.springframework.security.web.session.SessionManagementFilter@702ec0ad, org.springframework.security.web.access.ExceptionTranslationFilter@2d9bb04d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3445c371]
+""2018-02-08 20:22:20 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62046a66, org.springframework.security.web.context.SecurityContextPersistenceFilter@77026dee, org.springframework.security.web.header.HeaderWriterFilter@7ad9d2b3, org.springframework.security.web.authentication.logout.LogoutFilter@5ebfe61e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3a368d3a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@283e0a90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c46196e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e258221, org.springframework.security.web.session.SessionManagementFilter@73c62faf, org.springframework.security.web.access.ExceptionTranslationFilter@66b73a84]
+""2018-02-08 20:22:20 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2_console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4dd85e29, org.springframework.security.web.context.SecurityContextPersistenceFilter@218766d4, org.springframework.security.web.header.HeaderWriterFilter@13e59307, org.springframework.security.web.authentication.logout.LogoutFilter@5e3be4a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@44908871, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5266a929, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6da475c9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43a7fb6b, org.springframework.security.web.session.SessionManagementFilter@6cebe8f9, org.springframework.security.web.access.ExceptionTranslationFilter@45ef994, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c907496]
+""2018-02-08 20:22:21 [localhost-startStop-1] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+""2018-02-08 20:22:22 [localhost-startStop-1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-02-08 20:22:22 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Started DemoApplication in 9.118 seconds (JVM running for 15.988)
+""2018-02-08 20:22:22 [main] INFO  o.a.coyote.http11.Http11Protocol - Starting ProtocolHandler ["http-bio-8080"]
+""2018-02-08 20:22:30 [http-bio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2018-02-08 20:23:25 [http-bio-8080-exec-5] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+""2018-02-08 20:23:25 [http-bio-8080-exec-5] INFO  o.s.j.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+""2018-02-08 20:23:25 [http-bio-8080-exec-5] ERROR o.s.boot.web.support.ErrorPageFilter - Forwarding to error page from request [/tv/shows/recent] due to exception [PreparedStatementCallback; bad SQL grammar [select episodes.*,shows.name as showName from episodes inner join shows  on shows.id = episodes.showid where episodes.firstAired >=?]; nested exception is org.h2.jdbc.JdbcSQLException: Table "EPISODES" not found; SQL statement:
+select episodes.*,shows.name as showName from episodes inner join shows  on shows.id = episodes.showid where episodes.firstAired >=? [42102-196]]
+"org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [select episodes.*,shows.name as showName from episodes inner join shows  on shows.id = episodes.showid where episodes.firstAired >=?]; nested exception is org.h2.jdbc.JdbcSQLException: Table "EPISODES" not found; SQL statement:
+select episodes.*,shows.name as showName from episodes inner join shows  on shows.id = episodes.showid where episodes.firstAired >=? [42102-196]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:655)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:690)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:722)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:732)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:782)
+	at com.tv.db.ShowJdbcRepository.getRecentEpisodes(ShowJdbcRepository.java:71)
+	at com.tv.db.ShowJdbcRepository$$FastClassBySpringCGLIB$$9b7ed9f3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.tv.db.ShowJdbcRepository$$EnhancerBySpringCGLIB$$21b12f41.getRecentEpisodes(<generated>)
+	at com.tv.controller.tv.getRecentShows(tv.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.boot.web.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:115)
+	at org.springframework.boot.web.support.ErrorPageFilter.access$000(ErrorPageFilter.java:59)
+	at org.springframework.boot.web.support.ErrorPageFilter$1.doFilterInternal(ErrorPageFilter.java:90)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.boot.web.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: Table "EPISODES" not found; SQL statement:
+select episodes.*,shows.name as showName from episodes inner join shows  on shows.id = episodes.showid where episodes.firstAired >=? [42102-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.readTableOrView(Parser.java:5552)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1266)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1946)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2095)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1940)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1755)
+	at org.h2.command.Parser.parseSelect(Parser.java:1743)
+	at org.h2.command.Parser.parsePrepared(Parser.java:449)
+	at org.h2.command.Parser.parse(Parser.java:321)
+	at org.h2.command.Parser.parse(Parser.java:293)
+	at org.h2.command.Parser.prepareCommand(Parser.java:258)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
+	at org.springframework.jdbc.core.JdbcTemplate$SimplePreparedStatementCreator.createPreparedStatement(JdbcTemplate.java:1530)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:633)
+	... 105 common frames omitted
+"2018-02-08 20:27:07 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 17923 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 20:27:07 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 20:27:07 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 20:27:07 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60c47867: startup date [Thu Feb 08 20:27:07 EST 2018]; root of context hierarchy
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d6f183c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@14a1ba4' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fbc62679] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3e43bb8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'security.oauth2.client-org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration$$EnhancerBySpringCGLIB$$f58d778d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'resourceServerProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2018-02-08 20:27:09 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+""2018-02-08 20:27:10 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/schema.sql]
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/schema.sql] in 265 ms.
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from class path resource [sql-scripts/data.sql]
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from class path resource [sql-scripts/data.sql] in 8 ms.
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from URL [file:/home/matthew/Code/java/demo/target/classes/schema.sql]
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from URL [file:/home/matthew/Code/java/demo/target/classes/schema.sql] in 2 ms.
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executing SQL script from URL [file:/home/matthew/Code/java/demo/target/classes/data.sql]
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.s.jdbc.datasource.init.ScriptUtils - Executed SQL script from URL [file:/home/matthew/Code/java/demo/target/classes/data.sql] in 3 ms.
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2018-02-08 20:27:11 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2018-02-08 20:27:12 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:27:12 [localhost-startStop-1] WARN  o.s.s.o.p.t.s.JwtAccessTokenConverter - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.o.p.e.FrameworkEndpointHandlerMapping - Mapped "{[/oauth/token_key],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.String> org.springframework.security.oauth2.provider.endpoint.TokenKeyEndpoint.getKey(java.security.Principal)
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cf473bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@6743ce09, org.springframework.security.web.header.HeaderWriterFilter@5a0a8020, org.springframework.security.web.authentication.logout.LogoutFilter@38426a9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4222e52a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a01d590, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44106a88, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fe5a87f, org.springframework.security.web.session.SessionManagementFilter@7d20185b, org.springframework.security.web.access.ExceptionTranslationFilter@6913812e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3de3f9a8]
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@4688a4c0, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@aa3153e, org.springframework.security.web.context.SecurityContextPersistenceFilter@612b0b87, org.springframework.security.web.header.HeaderWriterFilter@52445ed1, org.springframework.security.web.authentication.logout.LogoutFilter@21bf6012, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@2928d367, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41ae85fc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31ecf9ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ac545bc, org.springframework.security.web.session.SessionManagementFilter@1e2343d, org.springframework.security.web.access.ExceptionTranslationFilter@735a6ff9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7139414]
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51c3a95c, org.springframework.security.web.context.SecurityContextPersistenceFilter@78a95b90, org.springframework.security.web.header.HeaderWriterFilter@9769e9e, org.springframework.security.web.authentication.logout.LogoutFilter@472da7b7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@756a1119, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d1333c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@acc891, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37cd1bb5, org.springframework.security.web.session.SessionManagementFilter@108ae98a, org.springframework.security.web.access.ExceptionTranslationFilter@2a3de85e]
+""2018-02-08 20:27:13 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2_console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a22c078, org.springframework.security.web.context.SecurityContextPersistenceFilter@40d2809c, org.springframework.security.web.header.HeaderWriterFilter@15234d92, org.springframework.security.web.authentication.logout.LogoutFilter@593126ff, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@d338b25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@294df4cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@260d63ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6200a25a, org.springframework.security.web.session.SessionManagementFilter@67930a11, org.springframework.security.web.access.ExceptionTranslationFilter@6c60b2c7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@476ec49c]
+""2018-02-08 20:27:14 [localhost-startStop-1] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+""2018-02-08 20:27:15 [localhost-startStop-1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-02-08 20:27:15 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Started DemoApplication in 8.603 seconds (JVM running for 15.584)
+""2018-02-08 20:27:15 [main] INFO  o.a.coyote.http11.Http11Protocol - Starting ProtocolHandler ["http-bio-8080"]
+""2018-02-08 20:27:31 [http-bio-8080-exec-8] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2018-02-08 20:29:38 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 18103 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 20:29:38 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 20:29:38 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 20:29:38 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@220c4d1c: startup date [Thu Feb 08 20:29:38 EST 2018]; root of context hierarchy
+""2018-02-08 20:29:40 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 20:29:40 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 20:29:41 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 20:29:41 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 20:29:41 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 20:29:41 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 20:29:41 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 20:29:41 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 20:29:41 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 20:29:41 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 20:29:42 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:29:42 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2018-02-08 20:29:42 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+""2018-02-08 20:29:42 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+""2018-02-08 20:29:42 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+""2018-02-08 20:29:43 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2018-02-08 20:29:43 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2018-02-08 20:29:43 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:29:44 [localhost-startStop-1] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+""2018-02-08 20:29:45 [localhost-startStop-1] INFO  o.s.b.a.s.AuthenticationManagerConfiguration - 
+
+Using default security password: a8c365c1-3d38-4b23-a64c-ac34d6f07bf6
+
+""2018-02-08 20:29:45 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+""2018-02-08 20:29:45 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2_console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64038b7c, org.springframework.security.web.context.SecurityContextPersistenceFilter@607d6752, org.springframework.security.web.header.HeaderWriterFilter@3e671d82, org.springframework.security.web.authentication.logout.LogoutFilter@351c92ea, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6392e0b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@613d8650, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c0efdb1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49622a9, org.springframework.security.web.session.SessionManagementFilter@122df540, org.springframework.security.web.access.ExceptionTranslationFilter@784e2e40, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70918f9e]
+""2018-02-08 20:29:45 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41d4cf98, org.springframework.security.web.context.SecurityContextPersistenceFilter@78b9c231, org.springframework.security.web.header.HeaderWriterFilter@22524524, org.springframework.security.web.authentication.logout.LogoutFilter@7dc1a173, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4bdf5cb0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37ea244f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7212cf3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b3671ad, org.springframework.security.web.session.SessionManagementFilter@52650ff3, org.springframework.security.web.access.ExceptionTranslationFilter@6b34951c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62082d00]
+""2018-02-08 20:29:45 [localhost-startStop-1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-02-08 20:29:45 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Started DemoApplication in 7.846 seconds (JVM running for 14.811)
+""2018-02-08 20:29:45 [main] INFO  o.a.coyote.http11.Http11Protocol - Starting ProtocolHandler ["http-bio-8080"]
+""2018-02-08 20:29:51 [http-bio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2018-02-08 20:30:48 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 18219 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 20:30:48 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 20:30:48 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 20:30:49 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1af0695b: startup date [Thu Feb 08 20:30:49 EST 2018]; root of context hierarchy
+""2018-02-08 20:30:50 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 20:30:50 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 20:30:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 20:30:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 20:30:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 20:30:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 20:30:51 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 20:30:51 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 20:30:51 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 20:30:51 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 20:30:53 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:30:53 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2018-02-08 20:30:53 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+""2018-02-08 20:30:53 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+""2018-02-08 20:30:53 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+""2018-02-08 20:30:53 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2018-02-08 20:30:53 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2018-02-08 20:30:53 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:30:55 [localhost-startStop-1] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+""2018-02-08 20:30:55 [localhost-startStop-1] INFO  o.s.b.a.s.AuthenticationManagerConfiguration - 
+
+Using default security password: ef3365fe-bef7-4fa8-b736-915bf6ae937d
+
+""2018-02-08 20:30:55 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+""2018-02-08 20:30:55 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2_console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@266493e9, org.springframework.security.web.context.SecurityContextPersistenceFilter@2309dedd, org.springframework.security.web.header.HeaderWriterFilter@4456923d, org.springframework.security.web.authentication.logout.LogoutFilter@3defccc5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64d5e41e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@395ef039, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e36090c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1beb67ab, org.springframework.security.web.session.SessionManagementFilter@1ad1d6aa, org.springframework.security.web.access.ExceptionTranslationFilter@1bb64bde, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c5d5837]
+""2018-02-08 20:30:55 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@163aea35, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f391ced, org.springframework.security.web.header.HeaderWriterFilter@2e802752, org.springframework.security.web.authentication.logout.LogoutFilter@3bbc771c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5c85daf2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2771bd99, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@864a492, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@375b8b2f, org.springframework.security.web.session.SessionManagementFilter@4e6e1bb, org.springframework.security.web.access.ExceptionTranslationFilter@3627dcf7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7123d3c6]
+""2018-02-08 20:30:56 [localhost-startStop-1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-02-08 20:30:56 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Started DemoApplication in 7.812 seconds (JVM running for 13.66)
+""2018-02-08 20:30:56 [main] INFO  o.a.coyote.http11.Http11Protocol - Starting ProtocolHandler ["http-bio-8080"]
+""2018-02-08 20:31:01 [http-bio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2018-02-08 20:31:33 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Starting DemoApplication on matthew-Y700 with PID 18326 (/home/matthew/Code/java/demo/target/classes started by matthew in /home/matthew/Code/java/demo)
+""2018-02-08 20:31:33 [localhost-startStop-1] DEBUG com.tv.demo.DemoApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+""2018-02-08 20:31:33 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - No active profile set, falling back to default profiles: default
+""2018-02-08 20:31:33 [localhost-startStop-1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@392e7ee: startup date [Thu Feb 08 20:31:33 EST 2018]; root of context hierarchy
+""2018-02-08 20:31:35 [localhost-startStop-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+""2018-02-08 20:31:35 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring embedded WebApplicationContext
+""2018-02-08 20:31:36 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'errorPageFilter' to: [/*]
+""2018-02-08 20:31:36 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-02-08 20:31:36 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-02-08 20:31:36 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-02-08 20:31:36 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-02-08 20:31:36 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+""2018-02-08 20:31:36 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+""2018-02-08 20:31:36 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'webServlet' to [/h2_console/*]
+""2018-02-08 20:31:37 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:31:37 [localhost-startStop-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+""2018-02-08 20:31:37 [localhost-startStop-1] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+""2018-02-08 20:31:38 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+""2018-02-08 20:31:38 [localhost-startStop-1] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+""2018-02-08 20:31:38 [localhost-startStop-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+""2018-02-08 20:31:38 [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+""2018-02-08 20:31:38 [localhost-startStop-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2018-02-08 20:31:39 [localhost-startStop-1] INFO  o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+""2018-02-08 20:31:40 [localhost-startStop-1] INFO  o.s.b.a.s.AuthenticationManagerConfiguration - 
+
+Using default security password: 39312abc-e6e2-4af3-9388-d302be25ebf0
+
+""2018-02-08 20:31:40 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**'], Ant [pattern='/error']]], []
+""2018-02-08 20:31:40 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/h2_console/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5692b7e1, org.springframework.security.web.context.SecurityContextPersistenceFilter@46a918eb, org.springframework.security.web.header.HeaderWriterFilter@7e2fc414, org.springframework.security.web.authentication.logout.LogoutFilter@5eed4be3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@472236ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61a40738, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7034a33d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c178ec0, org.springframework.security.web.session.SessionManagementFilter@1f1b5503, org.springframework.security.web.access.ExceptionTranslationFilter@6189cac5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43d4c28a]
+""2018-02-08 20:31:40 [localhost-startStop-1] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25e5c41b, org.springframework.security.web.context.SecurityContextPersistenceFilter@395db7ed, org.springframework.security.web.header.HeaderWriterFilter@160d07dc, org.springframework.security.web.authentication.logout.LogoutFilter@2bcba5cf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f7d8d84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a1dffa7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45034df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@163fe334, org.springframework.security.web.session.SessionManagementFilter@65d94daf, org.springframework.security.web.access.ExceptionTranslationFilter@56a2b43d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a6a08b0]
+""2018-02-08 20:31:40 [localhost-startStop-1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-02-08 20:31:40 [localhost-startStop-1] INFO  com.tv.demo.DemoApplication - Started DemoApplication in 7.991 seconds (JVM running for 14.629)
+""2018-02-08 20:31:40 [main] INFO  o.a.coyote.http11.Http11Protocol - Starting ProtocolHandler ["http-bio-8080"]
+""2018-02-08 20:32:07 [http-bio-8080-exec-4] INFO  o.a.c.c.C.[.[localhost].[/tvapp] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+"

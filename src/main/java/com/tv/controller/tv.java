@@ -4,7 +4,8 @@ import com.tv.db.ShowJdbcRepository;
 import com.tv.models.Episode;
 import com.tv.models.Show;
 import com.tv.models.Token;
-import jdk.nashorn.internal.ir.CatchNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.tv.biz.tvdb;
@@ -18,6 +19,8 @@ import java.util.List;
 @RequestMapping("/tv")
 @RestController
 public class tv {
+    private static final Logger LOGGER = LoggerFactory.getLogger(tv.class);
+
     @Autowired
     ShowJdbcRepository repository;
 
@@ -31,7 +34,7 @@ public class tv {
         tvdb tvapi = new tvdb();
         Token token = tvapi.getToken();
         String accessToken = token.getToken();
-        System.out.println("ACCESS TOKEN: " + accessToken);
+        LOGGER.debug("ACCESS TOKEN - {}", accessToken);
         session.setAttribute("token", accessToken);
         return token;
     }

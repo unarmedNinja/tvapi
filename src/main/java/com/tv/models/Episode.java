@@ -128,6 +128,16 @@ public class Episode {
     private String overview;
     private String formattedDate;
 
+    public String getShowName() {
+        return showName;
+    }
+
+    public void setShowName(String showName) {
+        this.showName = showName;
+    }
+
+    private String showName;
+
     public int getShowid() {
         return showid;
     }

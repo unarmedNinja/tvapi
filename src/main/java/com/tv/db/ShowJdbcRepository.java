@@ -68,7 +68,7 @@ public class ShowJdbcRepository {
     }
 
     public List<Episode> getRecentEpisodes(Date startDate) {
-        List<Episode> episodes = jdbcTemplate.query("select * from episodes where firstAired >=?", new Object[] {
+        List<Episode> episodes = jdbcTemplate.query("select episodes.*,shows.name as showName from episodes inner join shows  on shows.id = episodes.showid where episodes.firstAired >=?", new Object[] {
                         startDate
                 },
                 new BeanPropertyRowMapper< Episode >(Episode.class));
