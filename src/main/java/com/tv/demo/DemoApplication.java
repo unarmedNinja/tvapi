@@ -11,13 +11,6 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
 
-/*
-@ComponentScan(basePackageClasses = tv.class)
-@ComponentScan(basePackageClasses = AppEvent.class)
-@ComponentScan(basePackageClasses = ShowJdbcRepository.class)
-@ComponentScan(basePackageClasses = ResourceController.class)
- */
-
 @SpringBootApplication
 //@ComponentScan({"com.tv","com.jwt"})
 @ComponentScan({"com.tv"})

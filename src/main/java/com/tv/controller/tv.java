@@ -20,6 +20,7 @@ import java.util.List;
 @RestController
 public class tv {
     private static final Logger LOGGER = LoggerFactory.getLogger(tv.class);
+    private static final String TVTOKEN = "TVDBTOKEN";
 
     @Autowired
     ShowJdbcRepository repository;
@@ -30,36 +31,28 @@ public class tv {
     }
 
     @RequestMapping("/token")
-    public Token token(HttpSession session) {
+    public Token token() {
         tvdb tvapi = new tvdb();
         Token token = tvapi.getToken();
         String accessToken = token.getToken();
-        LOGGER.debug("ACCESS TOKEN - {}", accessToken);
-        session.setAttribute("token", accessToken);
+        LOGGER.debug("retrieved access token: {}", accessToken);
         return token;
     }
 
     @RequestMapping("/summary")
-    public String summary(HttpSession session){
-        String token = (String)session.getAttribute("token");
+    public String summary(@RequestHeader(TVTOKEN) String tvdbtoken){
         tvdb tvapi = new tvdb();
-        String data = tvapi.getSummary(token,"257655");
+        String data = tvapi.getSummary(tvdbtoken,"257655");
         return data;
     }
 
     @RequestMapping("/getEpisodes/{showId}")
-    public List<Episode> episodesdata(HttpSession session, @PathVariable("showId") int showId){
-        String token = (String)session.getAttribute("token");
-        if(token == null){
-            System.out.println("getting new token");
-            Token t = token(session);
-            token = t.getToken();
-        }
-
+    public List<Episode> episodesdata(@RequestHeader(TVTOKEN) String tvdbtoken, @PathVariable("showId") int showId){
+        LOGGER.debug("using tvdb token: {}", tvdbtoken);
         tvdb tvapi = new tvdb();
-        List<Episode> data = tvapi.getEpisodes(token,showId);
+        List<Episode> data = tvapi.getEpisodes(tvdbtoken,showId);
 
- //       data.forEach((e) -> repository.insertEpisode(e));
+        //       data.forEach((e) -> repository.insertEpisode(e));
         for (Episode e : data) {
             repository.insertEpisode(e);
         }
@@ -68,61 +61,61 @@ public class tv {
     }
 
     @RequestMapping("/episodes/{showId}")
-    public List<Episode> getEpisodes(HttpSession session,  @PathVariable("showId") int showId){
+    public List<Episode> getEpisodes(@PathVariable("showId") int showId){
         List<Episode> episodes = repository.getEpisodesByShowId(showId);
 
         return episodes;
     }
 
     @RequestMapping("/show")
-    public Show show(HttpSession session){
+    public Show show(){
         Show aShow = repository.findById(257655);
         return aShow;
     }
 
     @RequestMapping("/show/{id}")
-    public Show showById(HttpSession session, @PathVariable("showId") int showId){
+    public Show showById( @PathVariable("showId") int showId){
         Show aShow = repository.findById(showId);
         return aShow;
     }
 
     @RequestMapping("/shows")
-    public List<Show> getShows(HttpSession session){
+    public List<Show> getShows(){
         List<Show> shows = repository.getAllShows();
         return shows;
     }
 
     @RequestMapping("/shows/recent")
-    public List<Episode> getRecentShows(HttpSession session){
+    public List<Episode> getRecentShows(){
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());
-        cal.set(Calendar.DAY_OF_MONTH, cal.get(Calendar.DAY_OF_MONTH)-6);
+        cal.set(Calendar.DAY_OF_MONTH, cal.get(Calendar.DAY_OF_MONTH)-14);
 
         // convert to date
         Date myDate = cal.getTime();
-
+        LOGGER.debug("fetching recent episodes for date: {}", myDate.toString());
         List<Episode> episodes = repository.getRecentEpisodes(myDate);
         return episodes;
     }
 
     @RequestMapping(value = "/show/add", method = RequestMethod.POST)
-    public boolean addShow(HttpSession session, @RequestBody Show aShow){
+    public boolean addShow(@RequestBody Show aShow){
         try {
             Show bShow = repository.findById(aShow.getId());
         }
         catch(org.springframework.dao.EmptyResultDataAccessException dne){
-            System.out.println(dne);
+            LOGGER.debug("show does not exist. continue adding: {}", aShow);
             repository.insertShow(aShow);
             return true;
         }
         catch (Exception e){
-            System.out.println(e);
+            LOGGER.debug("adding show failed: {}", e);
         }
         return false;
     }
 
     @RequestMapping(value = "/shows/delete/{showId}", method = RequestMethod.DELETE)
-    public int getShows(HttpSession session, @PathVariable("showId") int showId){
+    public int getShows(@PathVariable("showId") int showId){
         int result = repository.deleteEpisodesByShowId(showId);
         return result;
     }

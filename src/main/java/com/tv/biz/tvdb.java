@@ -11,6 +11,7 @@ import com.tv.models.EpisodeWrapper;
 import com.tv.models.Token;
 import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -20,12 +21,23 @@ import org.springframework.http.client.HttpComponentsAsyncClientHttpRequestFacto
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class tvdb {
-    private final String API_KEY = "D0A2EF46A5938D34";
-    private final String USER_NAME = "unarmedninja";
-    private final String USER_KEY = "610C63A36CCFD6B0";
-    private final String API_DOMAIN = "https://api.thetvdb.com";
+    private static final Logger LOGGER = LoggerFactory.getLogger(tvdb.class);
+
+    @Value("${tv.api.key}")
+    private String API_KEY;
+
+    @Value("${tv.api.user.name}")
+    private String USER_NAME;
+
+    @Value("${tv.api.user.key}")
+    private String USER_KEY;
+
+    @Value("${tv.api.domain}")
+    private String API_DOMAIN;
 
     @Autowired
     ShowJdbcRepository repository;
@@ -47,7 +59,7 @@ public class tvdb {
         Token response = restTemplate.postForObject(url, request, Token.class);
 
 
-       // JSONObject jsonObj = new JSONObject(response);
+        // JSONObject jsonObj = new JSONObject(response);
         //String balance = jsonObj.get("data").toString();
         return response;
     }
@@ -72,7 +84,7 @@ public class tvdb {
 
     public List<Episode> getEpisodes(String accessToken, int id){
         if(accessToken == null){
-            System.out.println("MISSING ACCESS TOKEN");
+            LOGGER.debug("MISSING ACCESS TOKEN for show: - {}", id);
             return null;
         }
         String url = API_DOMAIN + "/series/" + id + "/episodes";
