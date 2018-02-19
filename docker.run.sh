@@ -1,7 +1,7 @@
 docker run -it --detach --rm \
   -e JPDA_ADDRESS=8000 \
   -e JPDA_TRANSPORT=dt_socket \
-  -e CATALINA_OPTS="-Dspring.config.location=file:/apps/application.properties" \
+      -e CATALINA_OPTS="-Dspring.config.location=file:/apps/application.properties" \
   --name tomcatTvDev \
   -p 8888:8080 \
   -p 9002:8000 \

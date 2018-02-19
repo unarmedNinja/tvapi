@@ -4,16 +4,21 @@ import com.jwt.controllers.ResourceController;
 import com.tv.biz.AppEvent;
 import com.tv.controller.tv;
 import com.tv.db.ShowJdbcRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
-
+@Configuration
 @SpringBootApplication
 //@ComponentScan({"com.tv","com.jwt"})
-@ComponentScan({"com.tv"})
+@ComponentScan({"com.tv.*"})
+@EnableAutoConfiguration
 public class DemoApplication extends SpringBootServletInitializer {
 
 	@Override

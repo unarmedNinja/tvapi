@@ -12,35 +12,42 @@ import com.tv.models.Token;
 import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.HttpComponentsAsyncClientHttpRequestFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+@Component
+@PropertySource("classpath:application.properties")
 public class tvdb {
-    private static final Logger LOGGER = LoggerFactory.getLogger(tvdb.class);
 
-    @Value("${tv.api.key}")
-    private String API_KEY;
-
-    @Value("${tv.api.user.name}")
-    private String USER_NAME;
-
-    @Value("${tv.api.user.key}")
-    private String USER_KEY;
-
-    @Value("${tv.api.domain}")
-    private String API_DOMAIN;
+    private String API_KEY = "D0A2EF46A5938D34";
+    private String USER_NAME = "unarmedninja";
+    private String USER_KEY = "610C63A36CCFD6B0";
+    private String API_DOMAIN = "https://api.thetvdb.com";
 
     @Autowired
     ShowJdbcRepository repository;
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(tvdb.class);
+
+    //You need this
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
 
     public Token getToken(){
         HttpHeaders httpHeaders = new HttpHeaders();

@@ -112,9 +112,33 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
+                <configuration>
+                    <additionalClasspathDirs>src/main/resources</additionalClasspathDirs>
+
+                    <contextReloadable>true</contextReloadable>
+                    <systemProperties>
+                        <CATALINA_OPTS>-Dspring.config.location=file:/home/matthew/Code/java/demo/src/main/resources/application.properties</CATALINA_OPTS>
+                        <JAVA_OPTS>-Dspring.config.location=file:/home/matthew/Code/java/demo/src/main/resources/application.properties</JAVA_OPTS>
+                    </systemProperties>
+                    <!--
+                    <systemProperties>
+                        <JAVA_OPTS>-Xmx1024m -Xms256m -XX:MaxPermSize=256m -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000</JAVA_OPTS>
+                    </systemProperties>
+-->
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>
+    <profiles>
+        <profile>
+            <!-- Enable this profile to run the application with "mvn tomcat7:run -Pdev. -->
+            <id>dev</id>
+            <build>
+                <resources>
+                    <resource><directory>src/main/resources</directory></resource>
+                </resources>
+            </build>
 
-
+        </profile>
+    </profiles>
 </project>
