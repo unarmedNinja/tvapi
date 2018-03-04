@@ -30,7 +30,7 @@ public class tv {
         return "Greetings from Spring Boot!";
     }
 
-    @RequestMapping("/token")   
+    @RequestMapping("/token")
     public Token token() {
         tvdb tvapi = new tvdb();
         Token token = tvapi.getToken();
