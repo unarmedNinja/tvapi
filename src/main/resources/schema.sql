@@ -21,3 +21,11 @@ create table episodes
     overview varchar(255),
     primary key(id)
 );
+
+create table applicationusers
+(
+   id integer not null AUTO_INCREMENT,
+   username varchar(255) not null,
+   password varchar(255) not null,
+   primary key(id)
+);

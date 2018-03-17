@@ -47,10 +47,10 @@ public class tv {
     }
 
     @RequestMapping("/getEpisodes/{showId}")
-    public List<Episode> episodesdata(@RequestHeader(TVTOKEN) String tvdbtoken, @PathVariable("showId") int showId){
+    public List<Episode> episodesdata(@RequestHeader(TVTOKEN) String tvdbtoken, @PathVariable("showId") int showId, @RequestParam("page") int page){
         LOGGER.debug("using tvdb token: {}", tvdbtoken);
         tvdb tvapi = new tvdb();
-        List<Episode> data = tvapi.getEpisodes(tvdbtoken,showId);
+        List<Episode> data = tvapi.getEpisodes(tvdbtoken,showId, page);
 
         //       data.forEach((e) -> repository.insertEpisode(e));
         for (Episode e : data) {

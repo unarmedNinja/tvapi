@@ -89,12 +89,12 @@ public class tvdb {
         return response.getBody();
     }
 
-    public List<Episode> getEpisodes(String accessToken, int id){
+    public List<Episode> getEpisodes(String accessToken, int id, int page){
         if(accessToken == null){
             LOGGER.debug("MISSING ACCESS TOKEN for show: - {}", id);
             return null;
         }
-        String url = API_DOMAIN + "/series/" + id + "/episodes";
+        String url = API_DOMAIN + "/series/" + id + "/episodes?page=" + page;
 
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.set("Content-Type", "application/json");

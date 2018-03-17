@@ -72,12 +72,15 @@ public class Episode {
 
     public void setFirstAired(String firstAired) {
         Date utilDate;
+        Date defaultDate = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         try {
             utilDate = formatter.parse(firstAired);
+            defaultDate = formatter.parse("1900-01-01");
+
         }
         catch (Exception e){
-            utilDate = new Date();
+            utilDate = defaultDate;
         }
 
         this.firstAired = utilDate;
