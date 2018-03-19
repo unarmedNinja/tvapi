@@ -29,3 +29,10 @@ create table applicationusers
    password varchar(255) not null,
    primary key(id)
 );
+
+create table user_role
+(
+   id integer not null,
+   role varchar(255) not null,
+    foreign key (id) references applicationusers(id)
+);

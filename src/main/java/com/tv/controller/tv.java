@@ -7,6 +7,7 @@ import com.tv.models.Token;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import com.tv.biz.tvdb;
 
@@ -67,13 +68,15 @@ public class tv {
         return episodes;
     }
 
+    @PreAuthorize("hasRole('ADMIN') or hasRole('STANDARD_USER')")
     @RequestMapping("/show")
     public Show show(){
         Show aShow = repository.findById(257655);
         return aShow;
     }
 
-    @RequestMapping("/show/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @RequestMapping("/show/{showId}")
     public Show showById( @PathVariable("showId") int showId){
         Show aShow = repository.findById(showId);
         return aShow;
@@ -85,6 +88,7 @@ public class tv {
         return shows;
     }
 
+    @PreAuthorize("hasRole('STANDARD_USER')")
     @RequestMapping("/shows/recent")
     public List<Episode> getRecentShows(){
         Calendar cal = Calendar.getInstance();

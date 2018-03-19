@@ -1,0 +1,5 @@
+curl -v -H "Content-Type: application/json" -X POST -d '{"username":"admin","password":"password"}' http://localhost:8080/login
+curl -v -XGET -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTUyMjE4MDI2N30.9BG_RtSpih_8a5HsLXBVqnesE6r6W0zb9_Az9b3Wx6oc3UyZ3rJbwxuCtqNx4mKMJsz90yv4jC7HPw9XD3GmBA" http://localhost:8080/tv/show
+
+curl -v -XGET -H "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInNjb3BlcyI6WyJST0xFX0FETUlOIl0sImV4cCI6MTUyMjI2MjA3Mn0.zc-QMJL6etK_YZDMBQOBX8_tF07VaYPDnsX1RBffWaik1TPYixs5bpDG7gBsPbiTGkj955FVq49pco1OEdKEUQ" http://localhost:8080/tv/show
+
